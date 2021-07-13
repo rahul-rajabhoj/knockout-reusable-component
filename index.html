@@ -13,7 +13,15 @@
 
    <body>
       <div id="knockout-app" class="card">
-         <h2>Items</h2>   
+         <h2>Items</h2> 
+         
+         <ul data-bind="foreach: items">
+            <li data-bind="text: $data"></li>
+         </ul>
+
+         <button class="LoadingButton">
+            <span>Get Items</span>
+         </button>
       </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
