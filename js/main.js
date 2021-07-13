@@ -14,6 +14,10 @@ function ItemListViewModel() {
             callback(MOCK_RESPONSE);
         }, 2000);
     }
+
+    self.onNewItems = function(newItems) {
+        self.items(newItems);
+    }
 }
 
 ko.components.register("loading-button", {
@@ -32,8 +36,8 @@ ko.components.register("loading-button", {
 
         self.onClick = function() {
             self.isLoading(true);
-
             params.action(function(data) {
+                params.onDone(data.items);
                 self.isLoading(false);
             });
         }

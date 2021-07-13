@@ -19,7 +19,7 @@
             <li data-bind="text: $data"></li>
          </ul>
 
-         <loading-button params="buttonTitle: 'Get All Items', action: fetchItems"></loading-button>
+         <loading-button params="buttonTitle: 'Get All Items', action: fetchItems, onDone: onNewItems"></loading-button>
       </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
